@@ -2,11 +2,18 @@ source ~/.promt_command_config
 
 ## Setting aliases
 alias q='cd ..; ls'
-alias publish='git checkout gh-pages; git checkout master -- src* spec*;git add .; git commit -m "Publish changes from master"; git push origin gh-pages; git checkout master'
+alias h="cd ~"
+alias ss='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 
-## Setting exports
-export PATH="/usr/local/bin:$PATH"
-export PATH="$PATH:~/scripts"
+# Git shortcuts
+alias gp='git push origin master'
+alias gco='git checkout'
+alias gc='git commit -m'
+alias gd='git diff'
+alias gs='git status'
+alias ga='git add'
+alias gpub='git checkout gh-pages; git checkout master -- src* spec*;git add .; git commit -m "Publish changes from master"; git push origin gh-pages; git checkout master'
+
 
 ## Expanding the history file
 export HISTFILESIZE=3000
@@ -20,4 +27,10 @@ shopt -s histappend
 #Keep multiline commands as one command in history
 shopt -s cmdhist
 
-#PROMPT_COMMAND='history -a'
+#####
+# Terminal colors
+####
+export CLICOLOR=1
+export LSCOLORS=Cxxxxxxx
+# Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 

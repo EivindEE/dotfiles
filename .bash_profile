@@ -1,19 +1,18 @@
 source ~/.promt_command_config
+source ~/.bash_aliases
 
-## Setting aliases
-alias q='cd ..; ls'
-alias h="cd ~"
-alias ss='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
+## Sett PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH=/opt/local/lib/postgresql91/bin:$PATH
+export PATH="$PATH:/usr/texbin"
+export PATH="$PATH:~/scripts"
+export PATH="$PATH:~/scripts/python-scripts"
+export PATH="$PATH:/usr/local/mysql/bin"
+export PATH="$PATH:/usr/local/Cellar/groovy/1.8.6/libexec"
 
-# Git shortcuts
-alias gp='git push origin master'
-alias gco='git checkout'
-alias gc='git commit -m'
-alias gd='git diff'
-alias gs='git status'
-alias ga='git add'
-alias gpub='git checkout gh-pages; git checkout master -- src* spec*;git add .; git commit -m "Publish changes from master"; git push origin gh-pages; git checkout master'
 
+# Exports
+export EDITOR=bbedit
 
 ## Expanding the history file
 export HISTFILESIZE=3000

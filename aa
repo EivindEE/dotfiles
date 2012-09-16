@@ -1,0 +1,8 @@
+#! /bin/bash
+
+ALIAS_FILE=~/.bash_aliases
+BASH_PROFILE=~/.bash_profile
+SHORTCUT=$1
+ALIAS=$2
+
+echo alias $SHORTCUT=\'$ALIAS\' >> $ALIAS_FILE;

@@ -42,12 +42,35 @@ export WHITE
 export BOLD
 export RESET
 
-function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+function parse_git_branch {
+  git rev-parse --git-dir &> /dev/null
+  git_status="$(git status 2> /dev/null)"
+  branch_pattern="^# On branch ([^${IFS}]*)"
+  remote_pattern="# Your branch is (.*) of"
+  diverge_pattern="# Your branch and (.*) have diverged"
+  
+  if [[ ! ${git_status}} =~ "working directory clean" ]]; then
+    state="${RED}⚡"
+  fi
+  # add an else if or two here if you want to get more specific
+  if [[ ${git_status} =~ ${remote_pattern} ]]; then
+    if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+      remote="${YELLOW}↑"
+    else
+      remote="${YELLOW}↓"
+    fi
+  fi
+  if [[ ${git_status} =~ ${diverge_pattern} ]]; then
+    remote="${YELLOW}↕"
+  fi
+  if [[ ${git_status} =~ ${branch_pattern} ]]; then
+    branch=${BASH_REMATCH[1]}
+    echo " (${branch})${remote}${state}"
+  fi
 }
 
-function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+function git_dirty_flag {
+  git status 2> /dev/null | grep -c : | awk '{if ($1 > 0) print "⚡"}'
 }
 
 export PS1="\[${BOLD}${MAGENTA}\]\u\[$RESET\]@\[$ORANGE\]\h  \[$GREEN\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RESET\]\n\$ \[$RESET\]"

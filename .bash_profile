@@ -10,7 +10,6 @@ export PATH="$PATH:~/scripts/python-scripts"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/usr/local/Cellar/groovy/1.8.6/libexec"
 
-
 # Exports
 export EDITOR=bbedit
 

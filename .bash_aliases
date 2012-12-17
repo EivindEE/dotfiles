@@ -29,3 +29,4 @@ alias acms='cd /Users/eivindelseth/Documents/Programering/JavaScript/a-cms'
 
 # Unordered aliases added by aa script (add alias: ~/scripts/aa)alias a='cd ..'
 alias src='source ~/.bash_profile'
+alias bbb='bb .'

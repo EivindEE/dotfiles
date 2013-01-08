@@ -1,5 +1,5 @@
-FILES=.bash_aliases .bash_profile .promt_command_config .vimrc
-BASH_FILES=~/.bash_aliases ~/.bash_profile ~/.promt_command_config ~/.vimrc
+FILES=.bash_aliases .bash_profile .promt_command_config .vimrc .gitconfig
+BASH_FILES=~/.bash_aliases ~/.bash_profile ~/.promt_command_config ~/.vimrc ~/.gitconfig
 BASH_DIR=~/
 
 update-local:

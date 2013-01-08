@@ -1,0 +1,13 @@
+[alias]
+	co = checkout
+[core]
+	editor = bbedit --wait
+	excludesfile = /Users/eivindelseth/.gitignore_global
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+[push]
+	default = current
+[include]
+	path = ~/.gitconfig.local

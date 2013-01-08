@@ -1,7 +1,7 @@
 #! /bin/bash
 # A shell script that adds a new alias to the bash aliases file
 # Written by: Eivind Elseth
-# Last update on: 16.09.2012
+# Last update on: 08.01.2013
 # ------------------------------
 
 if [ $# != 2 ] 

@@ -1,5 +1,5 @@
-FILES=.bash_aliases .bash_profile .promt_command_config .vimrc .gitconfig
-BASH_FILES=~/.bash_aliases ~/.bash_profile ~/.promt_command_config ~/.vimrc ~/.gitconfig
+FILES=.bash_aliases .bash_aliases.local  .bash_profile .bash_prompt .vimrc .gitconfig
+BASH_FILES=~/.bash_aliases ~/.bash_aliases.local ~/.bash_profile ~/.bash_prompt ~/.vimrc ~/.gitconfig
 BASH_DIR=~/
 
 update-local:
@@ -18,4 +18,4 @@ install: update-local
 
 update: 
 	@echo 'Copying changes from $(BASH_DIR)'
-	@cp $(BASH_FILES) .
+	@cp $(BASH_DIR)$(FILES) .

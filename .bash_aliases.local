@@ -1,0 +1,22 @@
+## OS X aliases
+alias xcode='open /Developer/Applications/Xcode.app/'
+alias ss='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
+
+## BBEdit shortcuts
+alias bb='bbedit'
+alias bbb='bb .'
+
+## Folder shortcuts
+alias sts='cd /Documents/workspaces'
+alias info331='cd /Dropbox/INFO331/Rapport'
+alias master='cd /Documents/Studier/Informasjonsvitenskap/Høst2012ogVår2013/INFO390/'
+alias t='cd /Documents/Studier/Informasjonsvitenskap/Høst2012ogVår2013/INFO390/Oppgave'
+alias s='cd /Documents/Studier/Informasjonsvitenskap/Høst2012ogVår2013/INFO390/SemTag'
+alias dropbox='cd ~/Dropbox'
+alias programering='cd ~/Documents/Programering'
+alias stud='cd /Users'/Documents/Studier/Informasjonsvitenskap/Vår2012'
+alias collos='cd /Documents/workspaces/INFO323/Collos'
+alias info323='cd /Dropbox/CollosReport/Final\ report'
+alias acms='cd /Documents/Programering/JavaScript/a-cms'
+alias dot='cd ~/Documents/Programering/dotfiles/'
+alias web='cd ~/Documents/Programering/web'

@@ -7,6 +7,8 @@
 	ui = auto
 	status = auto
 	branch = auto
+[color "diff"]
+	whitespace = red reverse
 [push]
 	default = current
 [include]

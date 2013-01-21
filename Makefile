@@ -1,4 +1,4 @@
-FILES=.bash_aliases .bash_aliases.local  .bash_profile .bash_prompt .vimrc .gitconfig .vim
+FILES=.bash_aliases .bash_aliases.local .bash_profile .bash_profile.local .bash_prompt .vimrc .gitconfig .vim
 BASH_DIR=~/
 
 update-local:

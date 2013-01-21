@@ -1,5 +1,6 @@
 source ~/.bash_prompt
 source ~/.bash_aliases
+source ~/.bash_profile.local
 
 ## Sett PATH
 export PATH="/usr/local/bin:$PATH"
@@ -9,9 +10,6 @@ export PATH="$PATH:~/scripts"
 export PATH="$PATH:~/scripts/python-scripts"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/usr/local/Cellar/groovy/1.8.6/libexec"
-
-# Exports
-export EDITOR=bbedit
 
 ## Expanding the history file
 export HISTFILESIZE=3000

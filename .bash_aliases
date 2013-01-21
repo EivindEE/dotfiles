@@ -38,3 +38,5 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias mbi='cd /Users/eivindelseth/Documents/Programering/web/microbrew-it'
 alias f='git fetch'
 alias gm='git merge'
+alias p='cd ~/Documents/Programering/'
+alias m='cd ~/Documents/Studier/Informasjonsvitenskap/Høst2012ogVår2013/INFO390/Oppgave '

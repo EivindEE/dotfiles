@@ -1,4 +1,4 @@
-FILES=.bash_aliases .bash_aliases.local  .bash_profile .bash_prompt .vimrc .gitconfig
+FILES=.bash_aliases .bash_aliases.local  .bash_profile .bash_prompt .vimrc .gitconfig .vim
 BASH_DIR=~/
 
 update-local:
@@ -13,8 +13,9 @@ export:
 	
 install: update-local
 	@echo 'Copying changes to $(BASH_DIR)'
-	@cp $(FILES) $(BASH_DIR)
+	@$(foreach file, $(FILES), echo "Copying $(file) to $(BASH_DIR)"; cp -r $(file) $(BASH_DIR) ; )
+	@cp -r $(FILES) $(BASH_DIR)
 
 update: 
-	@echo 'Copying changes from $(BASH_DIR)'
-	@cp $(BASH_DIR)$(FILES) .
+	echo 'Copying changes from $(BASH_DIR)'
+	@$(foreach file, $(FILES), echo "Copying $(BASH_DIR)$(file) to ."; cp -r $(BASH_DIR)$(file) . ; )

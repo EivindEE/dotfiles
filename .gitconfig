@@ -13,3 +13,6 @@
 	default = current
 [include]
 	path = ~/.gitconfig.local
+[user]
+	name = Eivind Eidheim Elseth
+	email = eivind.elseth@gmail.com

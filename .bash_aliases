@@ -1,10 +1,17 @@
-source ~/.bash_aliases.local
-## Shorthands
+LOCAL_ALIASES=~/.bash_aliases.local
+if [ -f $LOCAL_ALIASES ]
+then
+	echo 'Adding local aliases'
+	source $LOCAL_ALIASES
+else
+	echo 'No local aliases found'
+fi
+# Shorthands
 alias q='cd ..; ls'
 alias h="cd ~"
 alias src='source ~/.bash_profile'
 alias running='ps -fe|grep'
-
+alias most_used='history|awk '\''{print $2}'\''|awk '\''BEGIN {FS="|"} {print $1}'\''|sort|uniq -c|sort'
 # Git shortcuts
 alias gp='git push origin master'
 alias gco='git checkout'
@@ -15,6 +22,9 @@ alias ga='git add'
 alias gpub='git checkout gh-pages; git checkout master -- src* spec*;git add .; git commit -m "Publish changes from master"; git push origin gh-pages; git checkout master'
 alias gpo='git push origin'
 alias gb='git branch'
+alias gf='git fetch'
+alias gac='git commit -a -m'
+alias gm='git merge'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -32,11 +42,3 @@ alias lsd='ls -l ${colorflag} | grep "^d"'
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
-
-
-
-alias mbi='cd /Users/eivindelseth/Documents/Programering/web/microbrew-it'
-alias f='git fetch'
-alias gm='git merge'
-alias p='cd ~/Documents/Programering/'
-alias m='cd ~/Documents/Studier/Informasjonsvitenskap/Høst2012ogVår2013/INFO390/Oppgave '

@@ -1,6 +1,14 @@
+LOCAL_PROFILE=~/.bash_profile.local
 source ~/.bash_prompt
 source ~/.bash_aliases
-source ~/.bash_profile.local
+
+if [ -f $LOCAL_PROFILE ]
+then
+	echo 'Adding local profile'
+	source $LOCAL_PROFILE
+else
+	echo 'No local profile found'
+fi
 
 ## Sett PATH
 export PATH="/usr/local/bin:$PATH"

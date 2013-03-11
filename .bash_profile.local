@@ -1,2 +1,4 @@
 # Exports
 export EDITOR=bbedit
+export WNHOME=/usr/local/WordNet-3.0
+export PATH=/usr/local/WordNet-3.0/bin:$PATH

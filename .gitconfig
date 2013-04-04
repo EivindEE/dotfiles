@@ -1,7 +1,7 @@
 [alias]
 	co = checkout
 [core]
-	editor = bbedit --wait
+	editor = vim --wait
 	excludesfile = /Users/eivindelseth/.gitignore_global
 [color]
 	ui = auto
